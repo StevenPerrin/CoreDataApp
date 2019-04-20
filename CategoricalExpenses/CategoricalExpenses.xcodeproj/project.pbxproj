@@ -16,6 +16,10 @@
 		58A73BBF1FB550A2001EF4DF /* NewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBB1FB550A2001EF4DF /* NewExpenseViewController.swift */; };
 		58A73BC01FB550A2001EF4DF /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */; };
 		58A73BC11FB550A2001EF4DF /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */; };
+		C6C238E7226A7B4700BA5CEF /* Expense+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C238E3226A7B4700BA5CEF /* Expense+CoreDataClass.swift */; };
+		C6C238E8226A7B4700BA5CEF /* Expense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C238E4226A7B4700BA5CEF /* Expense+CoreDataProperties.swift */; };
+		C6C238E9226A7B4700BA5CEF /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C238E5226A7B4700BA5CEF /* Category+CoreDataClass.swift */; };
+		C6C238EA226A7B4700BA5CEF /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C238E6226A7B4700BA5CEF /* Category+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		58A73BBB1FB550A2001EF4DF /* NewExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewExpenseViewController.swift; sourceTree = "<group>"; };
 		58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		C6C238E3226A7B4700BA5CEF /* Expense+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6C238E4226A7B4700BA5CEF /* Expense+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C6C238E5226A7B4700BA5CEF /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6C238E6226A7B4700BA5CEF /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 		58A73BA41FB55081001EF4DF /* CategoricalExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				C6C238E3226A7B4700BA5CEF /* Expense+CoreDataClass.swift */,
+				C6C238E4226A7B4700BA5CEF /* Expense+CoreDataProperties.swift */,
+				C6C238E5226A7B4700BA5CEF /* Category+CoreDataClass.swift */,
+				C6C238E6226A7B4700BA5CEF /* Category+CoreDataProperties.swift */,
 				58A73BBC1FB550A2001EF4DF /* CategoriesViewController.swift */,
 				58A73BBD1FB550A2001EF4DF /* ExpensesViewController.swift */,
 				58A73BBA1FB550A2001EF4DF /* NewCategoryViewController.swift */,
@@ -156,11 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C238E7226A7B4700BA5CEF /* Expense+CoreDataClass.swift in Sources */,
 				58A73BC11FB550A2001EF4DF /* ExpensesViewController.swift in Sources */,
 				58A73BBE1FB550A2001EF4DF /* NewCategoryViewController.swift in Sources */,
 				58A73BC01FB550A2001EF4DF /* CategoriesViewController.swift in Sources */,
+				C6C238E8226A7B4700BA5CEF /* Expense+CoreDataProperties.swift in Sources */,
 				58A73BAE1FB55081001EF4DF /* CategoricalExpenses.xcdatamodeld in Sources */,
 				58A73BBF1FB550A2001EF4DF /* NewExpenseViewController.swift in Sources */,
+				C6C238EA226A7B4700BA5CEF /* Category+CoreDataProperties.swift in Sources */,
+				C6C238E9226A7B4700BA5CEF /* Category+CoreDataClass.swift in Sources */,
 				58A73BA61FB55081001EF4DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

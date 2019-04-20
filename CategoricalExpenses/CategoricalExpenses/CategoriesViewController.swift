@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var categoriesTableView: UITableView!
     
+    var categories: [Category] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        
+        do {
+            categories = try managedContext.fetch(fetchedRequest)
+            
+            categoriesTableView.reloadData()
+        } catch{
+            print("Could not fetch")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,16 +43,28 @@ class CategoriesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ExpensesViewController, let selectedRow = self.categoriesTableView.indexPathForSelectedRow?.row
+            else{
+                return
+        }
+        
+        destination.category = categories[selectedRow]
+    }
 }
 
 extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
         
+        let category = categories[indexPath.row]
+        cell.textLabel?.text = category.title
+        
         return cell
     }
 }
+

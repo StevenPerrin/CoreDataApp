@@ -28,7 +28,15 @@ class NewCategoryViewController: UIViewController {
     }
     
     @IBAction func saveCategory(_ sender: Any) {
+        let category = Category(title: titleTextField.text ?? "")
         
+        do{
+            try category?.managedObjectContext?.save()
+            
+            self.navigationController?.popViewController(animated: true)
+        }catch{
+            print("could not save category")
+        }
     }
 }
 
